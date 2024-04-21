@@ -54,7 +54,20 @@ html {
   padding-bottom: 5px;
   color: whitesmoke;
 }
-
+.hero122 .header {
+  font-family: 'Marck Script', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  color: whitesmoke;
+}
+.hero122 .header_1 {
+  font-family: 'Marck', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  color: #5161bd;
+}
 .hero12 {
   background: linear-gradient(rgb(1, 38, 83), rgb(61, 128, 196)), rgb(1, 38, 83) no-repeat;
   background-attachment: fixed;
