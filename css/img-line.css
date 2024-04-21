@@ -1,0 +1,10 @@
+.img-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Adjust spacing as needed */
+  flex-wrap: nowrap; /* Prevent wrapping to keep images in one line */
+}
+
+.img-line a { /* Target the anchor tags within the image container */
+  display: block; /* Ensure anchors behave as block elements */
+}

@@ -1,0 +1,599 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Антон & Ксюша!</title>
+    <meta name="description" content="We would like to invite you to our big day.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Ram & Antara getting hitched">
+    <meta property="og:description" content="We would like to invite you to our big day.">
+    <meta property="og:image" content="https://wedding.ramswaroop.me/img/hero-min.jpg">
+    <meta property="og:type" content="website">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <script>
+        // load css files from CDN if local node_modules fail
+        function loadCssFromCDN(css) {
+            // create new link tag
+            const link = document.createElement('link');
+            if (css === 'animate.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
+            } else if (css === 'font-awesome.css') {
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+            }
+            link.rel = 'stylesheet';
+
+            // add link tag to head section
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+
+        // load js files from CDN if local node_modules fail
+        function loadJsFromCDN(js) {
+            if (js === 'waypoints.js') {
+                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
+            } else if (js === 'jquery.js') {
+                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body id="top">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<section class="hero">
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="#"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="#intro">Обращение</a></li>
+                            <li><a href="#events">Дресс код</a></li>
+                            <li><a href="#eng-pics">Галерея</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Адрес</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#rsvp" class="btn-white btn-small">Ответить</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
+                </div>
+            </div>
+        </header>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png">
+                    <div class="hero12">
+                            <div class="col-md-12 text-center">
+                                <h class="title">06.07.2024</h>
+                            </div>
+                    </div>
+                    <div>
+                        <ul id="hitungmundur" >
+                            <li><span class="days">00</span><p class="days_text">Дней</p></li>
+                            <li class="separator">:</li>
+                            <li><span class="hours">00</span><p class="hours_text">Часов</p></li>
+                            <li class="separator">:</li>
+                            <li><span class="minutes">00</span><p class="minutes_text">Минут</p></li>
+                            <li class="separator">:</li>
+                            <li><span class="seconds">00</span><p class="seconds_text">Секунд</p></li>
+                        </ul>
+                        <div class="spasi">
+                        </div>
+                        <script type="text/javascript">
+                            var now = new Date();
+                            var day = now.getDate();
+                            var month = now.getMonth() + 1;
+                            var year = now.getFullYear() + 1;
+
+                            var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+                            var harih = '07/06/2024 11:30:00';
+
+                            $('#hitungmundur').countdown({
+                                date: harih, // TODO Date format: 07/27/2022 17:00:00
+                                offset: +7, // TODO Your Timezone Offset
+                                day: 'Дня',
+                                days: 'Дней'
+                            }, function () {
+                                alert('Done!');
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs "></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                                                           class="btn btn-white btn-large rsvp-btn">Приглашение</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
+        </div>
+    </div>
+    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
+</section>
+<section class="hero12 is-large">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="title">Дорогие гости</h2>
+            </div>
+        </div>
+    </div>
+        <section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
+            <div class="col-md-5">
+                <h1 class="header">С великой радостью приглашаем Вас разделить с нами один из самых важных и счастливых дней в нашей жизни – день нашего бракосочетания. Будем рады видеть Вас 06.07.2024. Ваше присутствие сделает этот день еще более особенным. Пожалуйста, сообщите о Вашем решении до 1.06.2024, чтобы мы могли учесть все детали.
+                    С любовью и нетерпением,</h1><div></div>
+                <div class="col-md-12 text-center">
+                    <h2 class="header">Антон и Ксения</h2>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp8"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
+        </div>
+    </div>
+</section>
+
+<section class="events section-padding" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="header_1">Подарки</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="wp3">
+                    <p>- Мы с нетерпением ждем встречи с вами на нашем торжестве! Вместо цветов, которые быстро завянут, вы можете оставить свой вклад в наше будущее семейное гнездышко.</p>
+                </div>
+                <div class="wp5">
+                    <p>- Чтобы наш праздник был наполнен ароматами счастья, мы просим вас не дарить цветы. Лучшим подарком для нас станет ваш вклад в нашу "копилку приключений.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
+                <div class="wp6">
+                    <p>- Цветы завянут, увянет букет,
+                        А вот финансы – полезный предмет!
+                        Их с благодарностью примем от вас,
+                        Чтоб исполнился наш семейный сказ!
+                </div>
+            </div>
+        </div>
+        <div class="row section-padding">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
+                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;Дресс код
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                    <h3 class="text-center section-padding">Ухх... дресс код?</h3>
+                    <p>
+                        <strong>Костюм диско? Нет!</strong>
+                        <br>
+                        Мы с большой любовью и трепетом готовимся к нашей свадьбе и очень стараемся сделать этот день особенным и красивым. Цветовая гамма торжества – от нежного светло-голубого до глубокого синего. Будем рады, если своими нарядами вы поддержите атмосферу праздника и при выборе платья или костюма, а также аксессуаров, придержитесь палитры нашей свадьбы. Ваша поддержка и участие сделают этот день ещё более волшебным!
+                    </p>
+                    <div class="color-circles">
+                        <span class="circle red"></span>
+                        <span class="circle orange"></span>
+                        <span class="circle yellow"></span>
+                        <span class="circle green"></span>
+                        <span class="circle blue"></span>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</section>
+
+<section id="eng-pics" class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-easing="linear">
+                <h1 class="title">Воспоминания</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2942-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2942-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3483-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/IMG_3483-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX2992-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX2992-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/_RFX3064-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/_RFX3064-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4089-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4089-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/NGP_4119-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/NGP_4119-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/x-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/x-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/z-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/z-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a class="fancybox" rel="group" href="img/eng_pics/c-lg.jpg">
+                    <div class="img-wrap">
+                        <div class="overlay">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <img src="img/eng_pics/c-sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row hidden-lg hidden-md hidden-xs">
+            <div class="col-xs-12 section-border section-padding"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Begin Lokasi Section -->
+<section class="section-darker" id="lokasi" >
+    <div class="container">
+        <div class="col-md-12 text-center" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title">Адрес</h1>
+            <div class="row text-center mb-3 mt-3">
+                <div class="col">
+                    <img src="img/zags.png" class="card-img-top" alt="qr-code-lokasi-upacara.png" />
+                    <img src="img/reatoran.png" class="card-img-top" alt="qr-code-lokasi-upacara.png" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row text-center mb-3 mt-3">
+                <div class="col">
+                    <a1 class="card-title">Отсканируйте код или жми на кнопку</a1>
+                    <p class="card-text"></p>
+                    <div class="row text-center">
+                        <div class="col-md-12" style="padding: 10px;">
+                            <a class="btn btn-fill btn-small" href="https://yandex.ru/maps/-/CDFEjAp9">
+                                <i class="fa fa-taxi"></i>&nbsp;&nbsp;ЗАГС
+                            <a class="btn btn-fill btn-small" href="https://yandex.ru/maps/-/CDFEjPIs">
+                                <i class="fa fa-taxi"></i>&nbsp;&nbsp;РЕСТОРАН
+                            <a class="btn btn-fill btn-small" data-toggle="modal" data-target="#dc-modal1">
+                                <i class="fa fa-barcode"></i>&nbsp;&nbsp;Ваши предпочтения
+                            </a>
+                            </a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+<script>
+// Функция для автоматического добавления +7 в начале номера
+function formatPhoneNumber(input) {
+  // Проверяем, начинается ли номер с "+7" и не пустое ли поле
+  if (input.value.indexOf("+7") !== 0 && input.value !== "") {
+    input.value = "+7" + input.value;
+  }
+  // Удаляем обработчик события, чтобы функция выполнялась только один раз
+  input.onfocus = null;
+}
+</script>
+<section class="rsvp text-center" id="rsvp">
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>×</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Спасибо!</h3>
+                        <p>Мы рады видеть, что вы присоединяетесь к нам в наш знаменательный день.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" data-aos="fade-up" data-aos-easing="linear">
+                <h3>Мы рады если вы присоеденитесь к нашему торжеству</h3>
+                <form id="rsvp-form" class="rsvp-form" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-envelope"></i>
+                                <input type="tel" name="phone" class=""
+                                    placeholder="+7 (___) ___-__-__"
+                                       pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                                        required
+                                        oninput="formatPhoneNumber(this)">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Ваше Имя и Фамилия"
+                                                                 required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="adults" class="" min="0"
+                                                                  max="15"
+                                                                  placeholder="Взрослых"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i><input type="number" name="children" class="" min="0"
+                                                                  max="15"
+                                                                  placeholder="Детей"
+                                                                  required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Код"
+                                                                required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <input type="hidden" id="foodPreferenceInput" name="food" value="">
+                    <input type="hidden" id="drinkPreferenceInput" name="drink" value="">
+                    <button class="btn-fill rsvp-btn" onclick="submitForm(event)">
+                        Отправить
+                    </button>
+                </form>
+    </div>
+    <div id="dc-modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="guestPreferencesModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="guestPreferencesModalLabel">Опрос</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="foodPreference">Есть ли у вас особые предпочтения по еде?</label>
+                        <select class="form-control" id="foodPreference">
+                            <option value="no_pref">Нет</option>
+                            <option value="no_meat">Не ем мясо</option>
+                            <option value="no_fish">Не ем рыбу</option>
+                            <option value="vegetarian">Вегетарианец</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="drinkPreference">Какой алкоголь вы предпочитаете?</label>
+                        <select class="form-control" id="drinkPreference">
+                            <option value="no_pref1">Нет</option>
+                            <option value="red_wine">Красное вино</option>
+                            <option value="white_wine">Белое вино</option>
+                            <option value="champagne">Шампанское</option>
+                            <option value="other1">Не пью</option>
+                        </select>
+                    </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-fill rsvp-btn" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn-fill rsvp-btn" onclick="savePreferences()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+</section>
+<script>
+function savePreferences() {
+  const foodPreference = document.getElementById("foodPreference").value;
+  const drinkPreference = document.getElementById("drinkPreference").value;
+
+  // Переводим предпочтения на русский
+  const foodPreferenceRU = translateFoodPreference(foodPreference);
+  const drinkPreferenceRU = translateDrinkPreference(drinkPreference);
+
+  // Передаем значения в скрытые поля формы
+  document.getElementById("foodPreferenceInput").value = foodPreferenceRU;
+  document.getElementById("drinkPreferenceInput").value = drinkPreferenceRU;
+
+  $('#dc-modal1').modal('hide'); // Закрываем модальное окно
+}
+
+// Функции для перевода предпочтений
+function translateFoodPreference(pref) {
+  switch (pref) {
+    case "no_pref": return "Нет предпочтений";
+    case "no_meat": return "Не ем мясо";
+    case "no_fish": return "Не ем рыбу";
+    case "vegetarian": return "Вегетарианец";
+    case "other": return "Не пью";
+    default: return "Не указано";
+  }
+}
+
+function translateDrinkPreference(pref) {
+  switch (pref) {
+    case "no_pref1": return "Нет предпочтений";
+    case "red_wine": return "Красное вино"; // Replace with actual values
+    case "white_wine": return "Белое вино"; // Replace with actual values
+    case "champagne": return "Шампанское"; // Replace with actual values
+    case "other1": return "Другое"; // Replace with actual values
+    default: return "Не указано";
+  }
+}
+
+function submitForm(event) {
+  // Предотвращаем стандартное поведение отправки формы
+  event.preventDefault();
+
+  // Получаем форму
+  const form = document.querySelector("form");
+
+  // Указываем URL обработчика (замените на ваш URL)
+  form.action = "https://script.google.com/macros/s/AKfycbygUFJwElGMbcX21IbeAoRZ1E4uNXzvhutlJKYTB9sSRZQFJZg6NbYnSFtF25I37zoA/exec";
+
+  // Отправляем форму
+  form.submit();
+}
+
+
+</script>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center content">
+                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
+                <p>С любовью от команды разработчиков <span class="fa fa-heart pulse2"></span> MYPA</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="js/vendor/ouical.js"></script>
+<script src="js/scripts.min.js"></script>
+<script src="js/menikah.js"></script>
+</body>
+</html>"></script>
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-46465113-4', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
