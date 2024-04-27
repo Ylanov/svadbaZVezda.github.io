@@ -73,11 +73,6 @@ html {
 <<<<<<< HEAD
   color: rgba(81, 97, 189, 0);
 }
-
-=======
-  color: #5161bd;
-}
->>>>>>> 97c099ca8f9b51aee7b749a3d1711d143beb89d8
 .hero12 {
   background: linear-gradient(rgb(1, 38, 83), rgb(61, 128, 196)), rgb(1, 38, 83) no-repeat;
   background-attachment: fixed;
